@@ -1,0 +1,32 @@
+body{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+}
+.navUl{
+    display: flex;
+    gap: 3rem;
+}
+.cart{
+    position: relative;
+}
+.cartImg{
+    width: 50px;
+    height: 50px;
+}
+.cartNumber{
+    position: absolute;
+    top: -25%;
+    right: 10%;
+}
+
+.parrafo{
+    font-size: 3rem;
+    color: #ffffff;
+}
