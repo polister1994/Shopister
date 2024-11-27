@@ -1,20 +1,23 @@
 import Cart from './Cart.jsx'
 
 function Navbar (){
-    return <nav className="nav">
+    return <div className='flexnav'>
+    <nav className="nav">
         <a href="/">Shopister</a>
         <ul className="navUl">
             <li>
-                <a href="/procesadores">Procesadores</a>
+                <a href="/">Procesadores</a>
             </li>
             <li>
-                <a href="graficas">Tarjetas Graficas</a>
+                <a href="/">Tarjetas Graficas</a>
             </li>
             <li>
-                <a href="monitores">Monitores</a>
+                <a href="/">Monitores</a>
             </li>
         </ul>
     </nav>
+    <Cart/>
+    </div>
 }
 
 

@@ -22,11 +22,15 @@ body{
 }
 .cartNumber{
     position: absolute;
-    top: -25%;
+    top: -15%;
     right: 10%;
 }
 
 .parrafo{
     font-size: 3rem;
     color: #ffffff;
+}
+.flexnav{
+    display: flex;
+    align-items: center;
 }
