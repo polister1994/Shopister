@@ -5,7 +5,7 @@ function Cards (){
     const [data, setData]= useState(null);
 
     useEffect(() => {
-    fetch ("https://api.escuelajs.co/api/v1/products")
+    fetch ("https://fakestoreapi.com/products")
     .then((response) => response.json())
     .then((data) => setData(data));
     }, []);
