@@ -1,4 +1,4 @@
-function Cart (propBtnCart){
+function CartWidget (propBtnCart){
     return <button className="cart"
     onClick={propBtnCart.callback} >
                 <img className="cartImg" src="..\..\src\assets\cart-icon.png" alt="" />
@@ -6,4 +6,4 @@ function Cart (propBtnCart){
             </button>
 }
 
-export default Cart
+export default CartWidget

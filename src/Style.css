@@ -5,12 +5,14 @@ body{
 }
 .nav{
     display: flex;
-    justify-content: space-around;
+    width: fit-content;
     align-items: center;
     margin: 2rem;
 }
 .navUl{
     display: flex;
+    justify-content: space-between;
+    width: 30rem;
     gap: 3rem;
 }
 .cart{
@@ -33,4 +35,17 @@ body{
 .flexnav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: 0 5rem;
+}
+.productCards{
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    height: fit-content;
+    gap:3rem;
+}
+.divCarts{
+    width: 10rem;
+    height: 10rem;
 }

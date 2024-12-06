@@ -1,17 +1,15 @@
 
 import './Style.css';
-import Navbar from './components/Navbar.jsx';
-import Cards from './components/Cards.jsx';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
-
-
+  
   return (
 
     <>
-      <Navbar/>
-      <Cards/>
-      
+      <NavBar/>
+      <ItemListContainer label='Indumentaria de prueba label'/>
     </>
   )
 }

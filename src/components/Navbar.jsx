@@ -1,6 +1,6 @@
-import Cart from './Cart.jsx'
+import CartWidget from './CartWidget.jsx'
 
-function Navbar (){
+function NavBar (){
     return <div className='flexnav'>
     <nav className="nav">
         <a href="/">Shopister</a>
@@ -16,9 +16,8 @@ function Navbar (){
             </li>
         </ul>
     </nav>
-    <Cart/>
+    <CartWidget/>
     </div>
 }
 
-
-export default Navbar
+export default NavBar
