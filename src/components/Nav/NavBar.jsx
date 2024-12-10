@@ -6,13 +6,13 @@ function NavBar (){
         <a href="/">Shopister</a>
         <ul className="navUl">
             <li>
-                <a href="/">Procesadores</a>
+                <a href="/">Ropa</a>
             </li>
             <li>
-                <a href="/">Tarjetas Graficas</a>
+                <a href="/">Componentes Electronicos</a>
             </li>
             <li>
-                <a href="/">Monitores</a>
+                <a href="/">Joyeria</a>
             </li>
         </ul>
     </nav>

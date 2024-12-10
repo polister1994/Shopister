@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import Item from './Item';
 
 function ItemList ({item}) {
+
     return (
-        <Item item ={item} />
+        <Item id='hola' item ={item} />
     )
 }
 

@@ -1,5 +1,5 @@
 import ItemList from './ItemList';
-import {useFetch} from "./useFetch"
+import {useFetch} from "../useFetch"
 
 function ItemListContainer (){
     const {item , loading, error } = useFetch('https://fakestoreapi.com/products')

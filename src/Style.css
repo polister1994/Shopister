@@ -38,14 +38,3 @@ body{
     justify-content: space-between;
     margin: 0 5rem;
 }
-.productCards{
-    display: flex;
-    flex-direction: column;
-    width: 5rem;
-    height: fit-content;
-    gap:3rem;
-}
-.divCarts{
-    width: 10rem;
-    height: 10rem;
-}

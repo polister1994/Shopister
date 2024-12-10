@@ -1,0 +1,40 @@
+.cardsFBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 3rem;
+}
+
+.productCards{
+    background-color: rgba(8, 8, 8, 0.521);
+    padding: 2rem 0.2rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    flex: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgCard{
+    width: 10rem;
+}
+.divCards{
+    width: auto;
+    height: auto;
+}
+.cardContent{
+    width: 10rem;
+    height: 15rem;
+    overflow: hidden;
+    justify-content: space-around;
+}
+.btnCard{
+    margin: 1rem;
+    background-color: rgb(33, 155, 255);
+}
+.btnCard:hover{
+    background-color:rgb(177, 165, 0);
+    transition: 0.5s;
+    color: #000000;
+}
