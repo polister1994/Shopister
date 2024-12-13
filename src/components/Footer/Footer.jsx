@@ -14,9 +14,9 @@ function Footer({footerDir, numContFooter}){
                 <p>Numero de Contacto: {numContFooter}</p>
             </div>
             <div className={style.divFooterSocialMedia}>
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
+                <img src="" alt="Logo Instagram" />
+                <img src="" alt="Logo Facebook" />
+                <img src="" alt="Logo X" />
             </div>
         </section>
     )
