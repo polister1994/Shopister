@@ -1,18 +1,33 @@
 import CartWidget from './CartWidget.jsx'
+import style from './NavBar.module.css'
+import { Link } from "react-router-dom";
 
 function NavBar (){
-    return <div className='flexnav'>
-    <nav className="nav">
-        <a href="/">Shopister</a>
-        <ul className="navUl">
-            <li>
-                <a href="/">Ropa</a>
+    return <div className={style.flexnav}>
+    <nav className={style.nav}>
+        <Link to='/'>
+            Shopister
+        </Link>
+        <ul className={style.navUl}>
+            <li  className={style.navLi}>
+                <Link to="/category/men's clothing">
+                    Ropa de Caballero
+                </Link>
             </li>
-            <li>
-                <a href="/">Componentes Electronicos</a>
+            <li  className={style.navLi}>
+                <Link to="/category/women's clothing">
+                    Ropa de Dama
+                </Link>
             </li>
-            <li>
-                <a href="/">Joyeria</a>
+            <li  className={style.navLi}>
+                <Link to="/category/electronics">
+                    Electronicos
+                </Link>
+            </li>
+            <li  className={style.navLi}>
+                <Link to="/category/jewelery">
+                    Joyeria
+                </Link>
             </li>
         </ul>
     </nav>

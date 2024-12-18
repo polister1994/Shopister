@@ -28,6 +28,10 @@
     height: 15rem;
     overflow: hidden;
     justify-content: space-around;
+    text-align:justify;
+}
+.producPrice{
+    text-align: center;
 }
 .btnCard{
     margin: 1rem;
@@ -37,4 +41,10 @@
     background-color:rgb(177, 165, 0);
     transition: 0.5s;
     color: #000000;
+}
+.counterBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }

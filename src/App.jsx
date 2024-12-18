@@ -1,31 +1,25 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './Style.css';
-import NavBar from './components/Nav/NavBar';
-import Home from './pages/home/home.jsx'
+import Home from './pages/Home/Home.jsx'
 import ItemListContainer from './components/Cards/ItemListContainer';
-import Footer from './components/Footer/Footer.jsx';
+import ItemDetailContainer from './components/Cards/ItemDetailContainer.jsx'
+import AppLayout from './layout/AppLayout.jsx';
 
 function App() {
-  const url = window.location.pathname;
-  const isRoot = url.endsWith('/');
-
   return (
     <BrowserRouter>
-      {isRoot ? (
-        <>
           <Routes>
-            <Route path='/' element={<Home label='Indumentaria de prueba label'/>}/> 
+            <Route path='/' element={<AppLayout nav={false} footer={false}/>}>
+              <Route path='/' element={<Home label='Indumentaria de prueba label'/>}/> 
+            </Route>  
+            <Route path='/' element={<AppLayout nav={true} footer={true}/>}>
+              <Route path='/ItemList' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
+              <Route path='/:category/:prod' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
+              <Route path='/item/:id' element={<ItemDetailContainer/>}/> 
+            </Route>
+
+
           </Routes>
-        </>
-      ) : (
-        <>
-          <NavBar/>
-          <Routes>
-            <Route path='/Itemlist' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
-          </Routes>
-          <Footer footerDir='Esto es una direccion' numContFooter='esto es un numero' /> 
-        </>
-      )}
     </BrowserRouter>
   );
 }

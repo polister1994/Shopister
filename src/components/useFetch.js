@@ -6,13 +6,13 @@ export function useFetch(url){
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        setLoading(true)
-        fetch (url)
+            setLoading(true)
+            fetch (url)
             .then((response) => response.json())
             .then((item) => setItem(item))
             .catch((error) => setError(error))
             .finally(() => setLoading(false));
-        }, []); 
+        }, [url]); 
         return { item , loading, error };
 }
 

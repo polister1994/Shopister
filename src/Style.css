@@ -3,38 +3,4 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.nav{
-    display: flex;
-    width: fit-content;
-    align-items: center;
-    margin: 2rem;
-}
-.navUl{
-    display: flex;
-    justify-content: space-between;
-    width: 30rem;
-    gap: 3rem;
-}
-.cart{
-    position: relative;
-}
-.cartImg{
-    width: 50px;
-    height: 50px;
-}
-.cartNumber{
-    position: absolute;
-    top: -15%;
-    right: 10%;
-}
 
-.parrafo{
-    font-size: 3rem;
-    color: #ffffff;
-}
-.flexnav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 5rem;
-}

@@ -4,7 +4,7 @@ import Item from './Item';
 function ItemList ({item}) {
 
     return (
-        <Item id='hola' item ={item} />
+        <Item item ={item} />
     )
 }
 

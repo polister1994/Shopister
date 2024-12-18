@@ -1,13 +1,24 @@
 import ItemList from './ItemList';
 import {useFetch} from "../useFetch"
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer (){
-    const {item , loading, error } = useFetch('https://fakestoreapi.com/products')
+
+    const {prod, category} = useParams()
+
+    const fetchUrl = category 
+    ? `https://fakestoreapi.com/products/${category}/${prod}` 
+    : `https://fakestoreapi.com/products/`;
+
+const { item, loading, error } = useFetch(fetchUrl);
+
     return (
         <>
-            {loading && <p>Cargando....</p>}
-            {error && <p>Error al cargar la pagina intente nuevamente</p>}
-            <ItemList item={item} />
+            {/* <NavBar/> */}
+                {loading && <p>Cargando....</p>}
+                {error && <p>Error al cargar la pagina intente nuevamente</p>}
+                <ItemList item={item} />
+            {/* <Footer footerDir='Buenos aires, Obelisco 5324' numContFooter='11122233344' /> */} 
         </>
     )
 }

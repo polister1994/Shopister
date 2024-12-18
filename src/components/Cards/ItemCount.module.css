@@ -1,0 +1,12 @@
+.countFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.counterBtns{
+    display:flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem;
+}
