@@ -1,19 +1,27 @@
 .detailFlex{
     display: flex;
-    margin: 10%;
+    align-items: center;
+    margin: 5rem;
     gap: 20%;
+    height: fit-content;
 }
 .detailDescriptionFlex{
     display: flex;
     flex-direction: column;
-    
+    overflow-x: auto;
 }
 .detailTitle{
-    font-size: 3rem;
-}
-.detailPrice{
     font-size: 2rem;
 }
-.detailProductDescription{
+.detailPrice{
     font-size: 1.5rem;
+}
+.detailProductDescription{
+    font-size: 0.8rem;
+}
+.detailButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

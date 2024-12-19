@@ -4,6 +4,7 @@ import Home from './pages/Home/Home.jsx'
 import ItemListContainer from './components/Cards/ItemListContainer';
 import ItemDetailContainer from './components/Cards/ItemDetailContainer.jsx'
 import AppLayout from './layout/AppLayout.jsx';
+import Error404 from './pages/Home/Error404.jsx';
 
 function App() {
   return (
@@ -16,9 +17,8 @@ function App() {
               <Route path='/ItemList' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
               <Route path='/:category/:prod' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
               <Route path='/item/:id' element={<ItemDetailContainer/>}/> 
+              <Route path='*' element={<Error404/>}/> 
             </Route>
-
-
           </Routes>
     </BrowserRouter>
   );
