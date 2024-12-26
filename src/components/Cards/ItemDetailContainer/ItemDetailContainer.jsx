@@ -1,5 +1,5 @@
-import ItemCount from "./ItemCount"
-import {useFetch} from "../useFetch"
+import ItemCount from "../ItemCount/ItemCount"
+import {useFetch} from "../../../Hooks/useFetch"
 import {useParams} from 'react-router-dom'
 import style from "./ItemDetailContainer.module.css"
 

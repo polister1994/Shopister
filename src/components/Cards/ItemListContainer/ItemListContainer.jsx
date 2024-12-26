@@ -1,5 +1,5 @@
-import ItemList from './ItemList';
-import {useFetch} from "../useFetch"
+import ItemList from '../ItemList/ItemList';
+import {useFetch} from "../../../Hooks/useFetch"
 import { useParams } from 'react-router-dom';
 
 function ItemListContainer (){
