@@ -4,7 +4,9 @@ import {useParams} from 'react-router-dom'
 import style from "./ItemDetailContainer.module.css"
 
 
+
 function ItemDetailContainer () {
+
 
     const {id} = useParams();
     
@@ -31,10 +33,7 @@ if(loading ) {
                     <p className={style.detailProductDescription}>{item.description}</p>
                     </div> 
                     <div className={style.detailButtons}>
-                        <ItemCount/>
-                        <button>
-                            Agregar al Carrito
-                        </button>
+                        <ItemCount item = {item}/>
                     </div>
                 </div>              
             </section>

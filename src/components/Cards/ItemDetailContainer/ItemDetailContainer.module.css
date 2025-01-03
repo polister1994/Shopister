@@ -1,7 +1,7 @@
 .detailFlex{
     display: flex;
     align-items: center;
-    margin: 5rem;
+    margin: 10rem 5rem;
     gap: 20%;
     height: fit-content;
 }

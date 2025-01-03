@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2rem;
+    margin: 1.2rem;
 }
 .navUl{
     display: flex;
@@ -23,12 +23,12 @@
 }
 .cartNumber{
     position: absolute;
-    top: -15%;
-    right: 10%;
+    top: -50%;
+    right: -30%;
 }
 .flexnav{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 98vw;
+    background-color: rgba(0, 0, 0, 0.815);
 }
