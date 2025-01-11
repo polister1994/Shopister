@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import './Style.css';
+import './App.css'
 import NavBar from './components/Nav/NavBar.jsx'
 import Footer from "./components/Footer/Footer.jsx"
 import ItemListContainer from './components/Cards/ItemListContainer/ItemListContainer.jsx';
@@ -13,13 +13,13 @@ function App() {
     <BrowserRouter>
       <NavBar/>
           <Routes>
-              <Route path='/' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
-              <Route path='/:category/:prod' element={<ItemListContainer label='Indumentaria de prueba label'/>}/> 
+              <Route path='/' element={<ItemListContainer />}/> 
+              <Route path='/category/:category' element={<ItemListContainer/>}/> 
               <Route path='/item/:id' element={<ItemDetailContainer/>}/>   
               <Route path='/Cart' element={<Cart/>}/>     
               <Route path='*' element={<Error404/>}/>      
           </Routes>
-      <Footer/>   
+      <Footer footerDir=" Belgrano 5343 09Hs a 20Hs" numContFooter="112223334455" />   
     </BrowserRouter>
   );
 }

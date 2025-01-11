@@ -1,25 +1,21 @@
 import ItemList from '../ItemList/ItemList';
-import {useFetch} from "../../../Hooks/useFetch"
+import { useState, useEffect} from "react";
+import { getProducts, getProductsByCategory } from '../../../firebase/db';
 import { useParams } from 'react-router-dom';
 
 function ItemListContainer (){
+    const [item, setItems]= useState(null)
+    const {category} = useParams()
 
-    const {prod, category} = useParams()
+useEffect(() => {
 
-    const fetchUrl = category 
-    ? `https://fakestoreapi.com/products/${category}/${prod}` 
-    : `https://fakestoreapi.com/products/`;
+    category ? getProductsByCategory(category, setItems) : getProducts(setItems)
 
-const { item, loading, error } = useFetch(fetchUrl);
-
+}, [category])
 
     return (
         <>
-            {/* <NavBar/> */}
-                {loading && <p>Cargando....</p>}
-                {error && <p>Error al cargar la pagina intente nuevamente</p>}
-                <ItemList item={item} />
-            {/* <Footer footerDir='Buenos aires, Obelisco 5324' numContFooter='11122233344' /> */} 
+            <ItemList item={item} />
         </>
     )
 }

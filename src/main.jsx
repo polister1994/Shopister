@@ -5,8 +5,6 @@ import App from './App.jsx'
 import CartProvider from './components/Context/cartProvider.jsx'
 
 
-
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>

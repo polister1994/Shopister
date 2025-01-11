@@ -10,5 +10,4 @@ function CartWidget (){
                 <p className={style.cartNumber}>{getProds()}</p>
             </Link>
 }
-
 export default CartWidget

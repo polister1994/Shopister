@@ -1,46 +1,22 @@
-import ItemCount from "../ItemCount/ItemCount"
-import {useFetch} from "../../../Hooks/useFetch"
-import {useParams} from 'react-router-dom'
-import style from "./ItemDetailContainer.module.css"
+import { useEffect, useState } from "react"
+import ItemDetail from "./ItemDetail"
+import { getProd } from "../../../firebase/db"
+import { useParams } from "react-router-dom"
 
+function ItemDetailContainer() {
 
+    const [item, setItem] = useState()
+    const {id} = useParams()
 
-function ItemDetailContainer () {
+    useEffect(() => {
+        getProd(id, setItem)
+    }, [id])
 
-
-    const {id} = useParams();
-    
-const { item, loading, error } = useFetch(`https://fakestoreapi.com/products/${id}` );
-
-if(loading ) {
     return (
         <>
-            <p>Cargando....</p>
-        </>
-    )
-} else  {
-    return (
-        <>
-            {error && <p>Error al cargar la pagina intente nuevamente</p>}
-            <section className={style.detailFlex}>
-                <div className={style.detailDivImage}>
-                    <img src={item.image} alt="Imagen de Producto" />
-                </div>
-                <div className={style.detailContent}>
-                    <div className={style.detailDescriptionFlex}>
-                    <h3 className={style.detailTitle}>{item.title}</h3>
-                    <h4 className={style.detailPrice}>{item.price}</h4>
-                    <p className={style.detailProductDescription}>{item.description}</p>
-                    </div> 
-                    <div className={style.detailButtons}>
-                        <ItemCount item = {item}/>
-                    </div>
-                </div>              
-            </section>
+        <ItemDetail item = {item}/>
         </>
     )
 }
-    
-} 
 
 export default ItemDetailContainer

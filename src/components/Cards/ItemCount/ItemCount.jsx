@@ -10,8 +10,6 @@ function ItemCount({item}){
         addToCart({...item, prods: count})
         
     }
-    
-
     const [count, setCount] = useState(0);
     
     const handleAdd = () => {
