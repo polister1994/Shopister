@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import style from "./footer.module.css"
+import style from "./Footer.module.css"
 
 function Footer({footerDir, numContFooter}){
 

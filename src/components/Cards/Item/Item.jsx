@@ -10,9 +10,9 @@ function Item ({ item }) {
                 <img  src={product.url} alt="Imagen de Producto" />
             </div>
             <div >
-                <p >${product.price}</p>
-                <p >{product.name}</p>
-                <p className="text-3xl font-bold underline">{product.description}</p>
+                <p >Precio: ${product.price}</p>
+                <p >Producto: {product.name}</p>
+                <p className="text-3xl font-bold underline">Descripcion: <br></br> {product.description}</p>
             </div>
             <Link to={`/item/${product.id}`}>
                 Ver detalle
