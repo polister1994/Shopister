@@ -23,7 +23,7 @@ function ItemCount({item}){
     return(
         <>
             <div className={style.countFlex}>
-            <p>{count}</p>
+            <p>Cantidad: {count}</p>
             </div>   
             <div className={style.counterBtns}>
                 <button onClick={handleSubstract} disabled={count < 1}>

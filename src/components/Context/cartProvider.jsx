@@ -4,36 +4,43 @@ import { useState } from "react";
 function CartProvider ( { children } ) {
     const[cart, setCart] = useState([])
     const addToCart = (item) => {
-        if(item.id in cart) {
-            const newItem = cart[item.id] = {
-                ...cart[item.id],
-                prods : cart[item.id].prods +  item.prods
+        setCart(prevCart => {
+            const cartItem = prevCart.find(cartItem => cartItem.id === item.id);
+            
+            if (cartItem) {
+                return prevCart.map(cartItem =>
+                    cartItem.id === item.id
+                        ? { ...cartItem, prods: cartItem.prods + item.prods }
+                        : cartItem
+                );
+            } else {
+                return [...prevCart, item];
             }
-            setCart(e => {
-                return {
-                    ...e , [item.id] : newItem
-                }
-            })
-        } else {
-            setCart(e => {
-                return {
-                    ...e , [item.id] : item
-                }
-            })
-        }
-
-        setCart([...cart, item]);
-    }
+        });
+    };
+    
 
     const getProds = () => {
         const productos = cart.map(item => item.prods)
         const sumaDeProductos = productos.reduce((acc,current) => acc + current , 0)
-        
         return sumaDeProductos
     } 
 
+    function borrarProducto(id){
+        setCart((prevCart) => prevCart.filter(product => product.id !== id));
+
+    }
+
+    function vaciarCarrito(){
+        setCart([])
+    }
+
+    function sumPrices (){
+        return cart.reduce((total, item) => total + ((item.price || 0) * item.prods), 0);
+    }
+
     return (
-        <CartContext.Provider value={{cart, addToCart, getProds}}>
+        <CartContext.Provider value={{cart, addToCart, getProds, borrarProducto, vaciarCarrito, sumPrices}}>
             {children}
         </CartContext.Provider>
     )

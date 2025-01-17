@@ -6,6 +6,7 @@ import ItemListContainer from './components/Cards/ItemListContainer/ItemListCont
 import ItemDetailContainer from './components/Cards/ItemDetailContainer/ItemDetailContainer.jsx';
 import Cart from './pages/Cart/Cart.jsx';
 import Error404 from './pages/Error/Error404.jsx'
+import Checkout from './components/Checkout/Checkout.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
               <Route path='/category/:category' element={<ItemListContainer/>}/> 
               <Route path='/item/:id' element={<ItemDetailContainer/>}/>   
               <Route path='/Cart' element={<Cart/>}/>     
+              <Route path='/checkout' element={<Checkout/>}/>
               <Route path='*' element={<Error404/>}/>      
           </Routes>
       <Footer footerDir=" Belgrano 5343 09Hs a 20Hs" numContFooter="112223334455" />   

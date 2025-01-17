@@ -16,6 +16,7 @@
 }
 .cart{
     position: relative;
+    margin-right: 2rem;
 }
 .cartImg{
     width: 50px;

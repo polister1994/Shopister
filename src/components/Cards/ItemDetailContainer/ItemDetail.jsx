@@ -13,7 +13,7 @@ function ItemDetail ({item}) {
                 <div className={style.detailContent}>
                     <div className={style.detailDescriptionFlex}>
                     <h3 className={style.detailTitle}>{item.name}</h3>
-                    <h4 className={style.detailPrice}>{item.price}</h4>
+                    <h4 className={style.detailPrice}>${item.price}</h4>
                     <p className={style.detailProductDescription}>{item.description}</p>
                     </div> 
                     <div className={style.detailButtons}>
