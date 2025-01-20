@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import './App.css'
 import NavBar from './components/Nav/NavBar.jsx'
 import Footer from "./components/Footer/Footer.jsx"
 import ItemListContainer from './components/Cards/ItemListContainer/ItemListContainer.jsx';

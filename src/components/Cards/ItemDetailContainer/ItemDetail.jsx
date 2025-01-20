@@ -8,9 +8,9 @@ function ItemDetail ({item}) {
         <>
             <section className={style.detailFlex}>
                 <div className={style.detailDivImage}>
-                    <img src={item.url} alt="Imagen de Producto" />
+                    <img className="h-128" src={item.url} alt="Imagen de Producto" />
                 </div>
-                <div className={style.detailContent}>
+                <div className="flex flex-col gap-10 w-96">
                     <div className={style.detailDescriptionFlex}>
                     <h3 className={style.detailTitle}>{item.name}</h3>
                     <h4 className={style.detailPrice}>${item.price}</h4>
